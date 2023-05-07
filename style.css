@@ -70,4 +70,24 @@ h1{
         width: 300px;
     }
 
+    .about-container .detail {
+        /* text-align: center; */
+        margin-left: 250px;
+        margin-right: 250px;
+        width: 300px;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        /* height: 100vh; */
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+
+
+
+
 }
