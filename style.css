@@ -38,7 +38,6 @@ h1{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     border-radius: 20px;
-    flex:1;
 }
 .map{
     justify-self: flex-end;
@@ -55,9 +54,9 @@ h1{
         margin-top: 20px;
         justify-content: center;
         align-items: center;
-        margin-left: 30px;
-        margin-right: 30px;
-
+        margin-left: 10px;
+        margin-right: 10px;
+        
         
     }
 
