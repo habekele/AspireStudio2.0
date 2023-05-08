@@ -46,7 +46,9 @@ h1{
 .contact-details{
     padding-left: 50px;
 }
-
+#testemonial > div > div.image > img{
+    height: 450px;
+}
 @media (max-width: 864px){
     .contact-container{
         display: flex;
@@ -87,7 +89,9 @@ h1{
     }
 
 
-
+    #testemonial > div > div.image > img{
+        height: 370px;
+    }
 
 
 }
