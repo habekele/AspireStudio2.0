@@ -32,11 +32,12 @@ h1{
 .about-container .detail p{
     font-size: normal;
     font-family:sans-serif;
+    padding: 5px;
     
 }
 
 .contact-container{
-    background-color: rgb(200, 204, 193);
+    background-color: rgba(240, 248, 255, 0.417);
     margin-left: 60px;
     margin-right: 60px;
     padding: 10px;
@@ -52,14 +53,14 @@ h1{
 
 .contact-details{
     padding-left: 50px;
-    font-size: bold;
-    font-family:sans-serif;
+    font-weight: 500;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 #testemonial > div > div.image{
     padding: 5px;
     border-radius: 15px;
-    background-color: white;
+    background-color: rgba(240, 248, 255, 0.417);
 }
 #testemonial > div > div.image > img{
     height: 450px;
@@ -109,5 +110,13 @@ h1{
         height: 370px;
     }
 
+
+}
+form {
+    max-width: 720px;
+    margin: 50px auto;
+    background-color: rgba(240, 248, 255, 0.417);
+    padding-top: 10px;
+    border-radius: 15px;
 
 }
