@@ -7,16 +7,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
-  <!-- ── NAVIGATION ── -->
+  <!-- ── NAV ── -->
   <header class="site-header" id="top">
     <nav class="navbar">
       <a href="#top" class="nav-logo">
-        <span class="logo-main">Aspire Studios</span>
-        <span class="logo-sub">Sioux Falls, SD</span>
+        <span class="logo-name">Aspire Studios</span>
+        <span class="logo-city">Sioux Falls, SD</span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -28,24 +28,20 @@
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#stylist">Meet Tru</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li>
-          <!-- ✏️  Replace the href below with your Square booking URL -->
-          <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-nav">Book Now</a>
-        </li>
+        <li><a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Book Now</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- ── HERO ── -->
   <section class="hero" id="hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Welcome to</p>
-      <h1 class="hero-title">Aspire Studios</h1>
-      <p class="hero-tagline">Where every client leaves feeling confident &amp; beautiful</p>
-      <!-- ✏️  Replace the href below with your Square booking URL -->
+    <div class="hero-text">
+      <p class="eyebrow">Welcome to</p>
+      <h1 class="hero-title">Aspire<br/><em>Studios</em></h1>
+      <p class="hero-sub">Where every client leaves feeling confident &amp; beautiful</p>
       <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-primary">Book Your Appointment</a>
     </div>
-    <div class="hero-image-wrap">
+    <div class="hero-img-wrap">
       <img src="./assets/salonstockphoto.jpeg" alt="Aspire Studios salon" class="hero-img" />
     </div>
   </section>
@@ -53,38 +49,36 @@
   <!-- ── SERVICES ── -->
   <section class="section services-section" id="services">
     <div class="container">
-      <p class="section-eyebrow">What We Offer</p>
-      <h2 class="section-title">Our Services</h2>
-      <div class="services-grid">
+      <p class="eyebrow">What We Offer</p>
+      <h2 class="headline">Our Services</h2>
 
-        <div class="service-card">
-          <div class="service-icon">
+      <div class="services-grid">
+        <div class="svc-card">
+          <div class="svc-icon">
             <img src="./assets/haircutIcon.png" alt="Hair icon" />
           </div>
           <h3>Hair Styling</h3>
-          <p>Cuts, color, blowouts, braids, and more — tailored to your unique texture and vision.</p>
+          <p>Cuts, color, blowouts, braids &amp; more — tailored to your unique texture and vision.</p>
         </div>
 
-        <div class="service-card service-card--featured">
-          <div class="service-icon">
+        <div class="svc-card featured">
+          <div class="svc-icon">
             <img src="./assets/icons8-lashes-64.png" alt="Lashes icon" />
           </div>
           <h3>Lash Services</h3>
-          <p>Classic, hybrid, and volume lash sets applied with precision for a flawless, lasting look.</p>
+          <p>Classic, hybrid, and volume sets applied with precision for a flawless, lasting look.</p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">
+        <div class="svc-card">
+          <div class="svc-icon">
             <img src="./assets/icons8-spa-96.png" alt="Spa icon" />
           </div>
           <h3>Spa &amp; Nails</h3>
-          <p>Relaxing spa treatments and nail care to complete your self-care experience.</p>
+          <p>Relaxing spa treatments and nail care to complete your full self-care experience.</p>
         </div>
-
       </div>
 
-      <div class="services-cta">
-        <!-- ✏️  Replace the href below with your Square booking URL -->
+      <div class="section-cta">
         <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-outline">Book a Service</a>
       </div>
     </div>
@@ -93,72 +87,63 @@
   <!-- ── GALLERY ── -->
   <section class="section gallery-section" id="gallery">
     <div class="container">
-      <p class="section-eyebrow">Our Work</p>
-      <h2 class="section-title">Recent Looks</h2>
+      <p class="eyebrow">Our Work</p>
+      <h2 class="headline">Recent Looks</h2>
+
       <div class="gallery-grid">
-        <div class="gallery-item gallery-item--tall">
+        <div class="g-item">
           <img src="./assets/hairpic.jpeg" alt="Hair styling" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="./assets/lashespic.jpeg" alt="Lash extensions" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="./assets/nailspic.png" alt="Nail art" />
         </div>
-        <div class="gallery-item">
+        <div class="g-item">
           <img src="./assets/salonstockphoto.jpeg" alt="Salon atmosphere" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── MEET THE STYLIST ── -->
+  <!-- ── MEET TRU ── -->
   <section class="section stylist-section" id="stylist">
     <div class="container stylist-inner">
-      <div class="stylist-image-wrap">
+      <div class="stylist-img-wrap">
         <img src="./assets/tru.jpeg" alt="Trualem Johnson, Master Stylist" class="stylist-img" />
       </div>
       <div class="stylist-bio">
-        <p class="section-eyebrow">Meet Your Stylist</p>
-        <h2 class="section-title">Trualem Johnson</h2>
-        <p class="stylist-title">Master Stylist &amp; Founder</p>
-        <p>
-          Born in Ethiopia and raised with a deep appreciation for beauty, culture, and craft,
-          Trualem brings her passion and artistry to every client she touches. Since making
-          Sioux Falls her home, she has built a reputation for transformative styles, flawless
-          lash work, and an experience that always makes clients feel seen and celebrated.
-        </p>
-        <p>
-          At Aspire Studios, you're not just getting a service — you're getting Tru's full
-          attention, creativity, and heart.
-        </p>
-        <!-- ✏️  Replace the href below with your Square booking URL -->
+        <p class="eyebrow">Meet Your Stylist</p>
+        <h2 class="headline">Trualem Johnson</h2>
+        <p class="stylist-role">Master Stylist &amp; Founder</p>
+        <p>Born in Ethiopia and raised with a deep appreciation for beauty, culture, and craft, Trualem brings her passion and artistry to every client she touches.</p>
+        <p>Since making Sioux Falls her home, she has built a reputation for transformative styles, flawless lash work, and an experience that always makes clients feel seen and celebrated.</p>
         <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-primary">Book with Tru</a>
       </div>
     </div>
   </section>
 
   <!-- ── CONTACT ── -->
-  <section class="section contact-section" id="contact">
+  <section class="section" id="contact">
     <div class="container contact-inner">
-
       <div class="contact-info">
-        <p class="section-eyebrow">Find Us</p>
-        <h2 class="section-title">Visit the Studio</h2>
+        <p class="eyebrow">Find Us</p>
+        <h2 class="headline">Visit the Studio</h2>
 
-        <div class="contact-detail">
-          <span class="contact-label">Address</span>
+        <div class="detail">
+          <span class="detail-label">Address</span>
           <span>1900 South Sertoma Avenue<br/>Sioux Falls, SD 57106</span>
         </div>
 
-        <div class="contact-detail">
-          <span class="contact-label">Phone</span>
+        <div class="detail">
+          <span class="detail-label">Phone</span>
           <a href="tel:+16053629844">(605) 362-9844</a>
         </div>
 
-        <div class="contact-detail">
-          <span class="contact-label">Hours</span>
-          <table class="hours-table">
+        <div class="detail">
+          <span class="detail-label">Hours</span>
+          <table class="hours">
             <tr><td>Mon – Thu</td><td>9:00 am – 6:30 pm</td></tr>
             <tr><td>Friday</td><td>9:00 am – 5:30 pm</td></tr>
             <tr><td>Saturday</td><td>By Appointment</td></tr>
@@ -166,23 +151,20 @@
           </table>
         </div>
 
-        <!-- ✏️  Replace the href below with your Square booking URL -->
-        <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:1.5rem;">Book Online</a>
+        <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:1rem;">Book Online</a>
       </div>
 
-      <div class="contact-map">
+      <div class="map-wrap">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.1234567890!2d-96.77031!3d43.52365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878ec5bddc6e1d5f%3A0x9c0f5fb1b3e2f4a5!2s1900%20S%20Sertoma%20Ave%2C%20Sioux%20Falls%2C%20SD%2057106!5e0!3m2!1sen!2sus!4v1234567890"
-          width="100%"
-          height="400"
-          style="border:0; border-radius:20px;"
+          width="100%" height="420"
+          style="border:0;"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Aspire Studios location"
         ></iframe>
       </div>
-
     </div>
   </section>
 
@@ -190,18 +172,21 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo-main">Aspire Studios</span>
-        <span class="footer-tagline">Sioux Falls, SD &nbsp;·&nbsp; (605) 362-9844</span>
+        <span class="logo-name">Aspire Studios</span>
+        <span class="logo-city">Sioux Falls, SD &nbsp;·&nbsp; (605) 362-9844</span>
       </div>
       <div class="footer-social">
+        <!-- Instagram -->
         <a href="#" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </a>
+        <!-- Facebook -->
         <a href="#" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
+        <!-- Pinterest -->
         <a href="#" aria-label="Pinterest">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.76 1.22-5.16 1.22-5.16s-.31-.62-.31-1.54c0-1.44.84-2.52 1.88-2.52.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.89 1.54 1.89 1.85 0 3.1-2.37 3.1-5.16 0-2.14-1.44-3.64-3.5-3.64-2.38 0-3.78 1.79-3.78 3.63 0 .72.28 1.49.62 1.91.07.08.08.15.06.24-.06.27-.21.85-.23.97-.04.16-.13.19-.29.12-1.1-.51-1.79-2.13-1.79-3.43 0-2.79 2.02-5.35 5.83-5.35 3.06 0 5.44 2.18 5.44 5.09 0 3.04-1.91 5.47-4.57 5.47-.89 0-1.73-.46-2.02-1.01l-.55 2.06c-.2.77-.73 1.73-1.09 2.32.82.25 1.69.39 2.59.39 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.76 1.22-5.16 1.22-5.16s-.31-.62-.31-1.54c0-1.44.84-2.52 1.88-2.52.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.89 1.54 1.89 1.85 0 3.1-2.37 3.1-5.16 0-2.14-1.44-3.64-3.5-3.64-2.38 0-3.78 1.79-3.78 3.63 0 .72.28 1.49.62 1.91.07.08.08.15.06.24-.06.27-.21.85-.23.97-.04.16-.13.19-.29.12-1.1-.51-1.79-2.13-1.79-3.43 0-2.79 2.02-5.35 5.83-5.35 3.06 0 5.44 2.18 5.44 5.09 0 3.04-1.91 5.47-4.57 5.47-.89 0-1.73-.46-2.02-1.01l-.55 2.06c-.2.77-.73 1.73-1.09 2.32.82.25 1.69.39 2.59.39 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
         </a>
       </div>
       <p class="footer-copy">&copy; 2026 Aspire Studios. All rights reserved.</p>
@@ -209,24 +194,26 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
     const toggle = document.getElementById('navToggle');
     const links  = document.getElementById('navLinks');
+
     toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      toggle.classList.toggle('active');
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('active', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-    // Close nav on link click (mobile)
+
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         links.classList.remove('open');
         toggle.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
-    // Shrink header on scroll
+
     window.addEventListener('scroll', () => {
-      document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 60);
-    });
+      document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
   </script>
 
 </body>
