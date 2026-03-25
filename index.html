@@ -61,7 +61,7 @@
           <p>Cuts, color, blowouts, braids &amp; more — tailored to your unique texture and vision.</p>
         </div>
 
-        <div class="svc-card featured">
+        <div class="svc-card">
           <div class="svc-icon">
             <img src="./assets/icons8-lashes-64.png" alt="Lashes icon" />
           </div>
@@ -200,14 +200,12 @@
     toggle.addEventListener('click', () => {
       const open = links.classList.toggle('open');
       toggle.classList.toggle('active', open);
-      document.body.style.overflow = open ? 'hidden' : '';
     });
 
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         links.classList.remove('open');
         toggle.classList.remove('active');
-        document.body.style.overflow = '';
       });
     });
 
