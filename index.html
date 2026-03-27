@@ -28,7 +28,7 @@
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#stylist">Meet Tru</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Book Now</a></li>
+        <li><a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-nav btn-primary">Book Now</a></li>
       </ul>
     </nav>
   </header>
@@ -41,9 +41,6 @@
       <p class="hero-sub">Where every client leaves feeling confident &amp; beautiful</p>
       <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" class="btn btn-primary">Book Your Appointment</a>
     </div>
-    <div class="hero-img-wrap">
-      <img src="./assets/salonstockphoto.jpeg" alt="Aspire Studios salon" class="hero-img" />
-    </div>
   </section>
 
   <!-- ── SERVICES ── -->
@@ -53,29 +50,47 @@
       <h2 class="headline">Our Services</h2>
 
       <div class="services-grid">
+
         <div class="svc-card">
           <div class="svc-icon">
-            <img src="./assets/haircutIcon.png" alt="Hair icon" />
+            <!-- Scissors / Hair -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="6" cy="6" r="3"/>
+              <circle cx="6" cy="18" r="3"/>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+            </svg>
           </div>
-          <h3>Hair Styling</h3>
-          <p>Cuts, color, blowouts, braids &amp; more — tailored to your unique texture and vision.</p>
+          <h3>Hair Services</h3>
+          <p>Cuts and color tailored to your hair type — from fresh trims to full transformations.</p>
         </div>
 
-        <div class="svc-card featured">
+        <div class="svc-card">
           <div class="svc-icon">
-            <img src="./assets/icons8-lashes-64.png" alt="Lashes icon" />
+            <!-- Eye / Lashes -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
           </div>
-          <h3>Lash Services</h3>
+          <h3>Lash Extensions</h3>
           <p>Classic, hybrid, and volume sets applied with precision for a flawless, lasting look.</p>
         </div>
 
         <div class="svc-card">
           <div class="svc-icon">
-            <img src="./assets/icons8-spa-96.png" alt="Spa icon" />
+            <!-- Feather / Waxing & Threading -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/>
+              <line x1="16" y1="8" x2="2" y2="22"/>
+              <line x1="17.5" y1="15" x2="9" y2="15"/>
+            </svg>
           </div>
-          <h3>Spa &amp; Nails</h3>
-          <p>Relaxing spa treatments and nail care to complete your full self-care experience.</p>
+          <h3>Waxing &amp; Threading</h3>
+          <p>Precise waxing and threading for brows, face, and body — smooth, clean results every time.</p>
         </div>
+
       </div>
 
       <div class="section-cta">
@@ -90,19 +105,40 @@
       <p class="eyebrow">Our Work</p>
       <h2 class="headline">Recent Looks</h2>
 
+      <!--
+        Styled editorial tiles while real photos are added.
+        Replace any .g-tile div with a standard .g-item + <img> whenever
+        a photo is ready.
+      -->
       <div class="gallery-grid">
-        <div class="g-item">
-          <img src="./assets/hairpic.jpeg" alt="Hair styling" />
+
+        <div class="g-item g-tile g-tile--dark">
+          <div class="g-tile-body">
+            <span class="g-tile-cat">Hair</span>
+            <span class="g-tile-name">Styling</span>
+          </div>
         </div>
-        <div class="g-item">
-          <img src="./assets/lashespic.jpeg" alt="Lash extensions" />
+
+        <div class="g-item g-tile g-tile--brown">
+          <div class="g-tile-body">
+            <span class="g-tile-cat">Lash</span>
+            <span class="g-tile-name">Services</span>
+          </div>
         </div>
-        <div class="g-item">
-          <img src="./assets/nailspic.png" alt="Nail art" />
+
+        <div class="g-item g-tile g-tile--tan">
+          <div class="g-tile-body">
+            <span class="g-tile-cat">Waxing &amp;</span>
+            <span class="g-tile-name">Threading</span>
+          </div>
         </div>
-        <div class="g-item">
-          <img src="./assets/salonstockphoto.jpeg" alt="Salon atmosphere" />
+
+        <div class="g-item g-tile g-tile--light">
+          <div class="g-tile-body g-tile-body--quote">
+            <span>&ldquo;Where every client leaves feeling confident &amp; beautiful&rdquo;</span>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -176,17 +212,14 @@
         <span class="logo-city">Sioux Falls, SD &nbsp;·&nbsp; (605) 362-9844</span>
       </div>
       <div class="footer-social">
-        <!-- Instagram -->
         <a href="#" aria-label="Instagram">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </a>
-        <!-- Facebook -->
         <a href="#" aria-label="Facebook">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
-        <!-- Pinterest -->
         <a href="#" aria-label="Pinterest">
-          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.76 1.22-5.16 1.22-5.16s-.31-.62-.31-1.54c0-1.44.84-2.52 1.88-2.52.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.89 1.54 1.89 1.85 0 3.1-2.37 3.1-5.16 0-2.14-1.44-3.64-3.5-3.64-2.38 0-3.78 1.79-3.78 3.63 0 .72.28 1.49.62 1.91.07.08.08.15.06.24-.06.27-.21.85-.23.97-.04.16-.13.19-.29.12-1.1-.51-1.79-2.13-1.79-3.43 0-2.79 2.02-5.35 5.83-5.35 3.06 0 5.44 2.18 5.44 5.09 0 3.04-1.91 5.47-4.57 5.47-.89 0-1.73-.46-2.02-1.01l-.55 2.06c-.2.77-.73 1.73-1.09 2.32.82.25 1.69.39 2.59.39 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.76 1.22-5.16 1.22-5.16s-.31-.62-.31-1.54c0-1.44.84-2.52 1.88-2.52.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.89 1.54 1.89 1.85 0 3.1-2.37 3.1-5.16 0-2.14-1.44-3.64-3.5-3.64-2.38 0-3.78 1.79-3.78 3.63 0 .72.28 1.49.62 1.91.07.08.08.15.06.24-.06.27-.21.85-.23.97-.04.16-.13.19-.29.12-1.1-.51-1.79-2.13-1.79-3.43 0-2.79 2.02-5.35 5.83-5.35 3.06 0 5.44 2.18 5.44 5.09 0 3.04-1.91 5.47-4.57 5.47-.89 0-1.73-.46-2.02-1.01l-.55 2.06c-.2.77-.73 1.73-1.09 2.32.82.25 1.69.39 2.59.39 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
         </a>
       </div>
       <p class="footer-copy">&copy; 2026 Aspire Studios. All rights reserved.</p>
@@ -200,14 +233,12 @@
     toggle.addEventListener('click', () => {
       const open = links.classList.toggle('open');
       toggle.classList.toggle('active', open);
-      document.body.style.overflow = open ? 'hidden' : '';
     });
 
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         links.classList.remove('open');
         toggle.classList.remove('active');
-        document.body.style.overflow = '';
       });
     });
 
