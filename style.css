@@ -101,14 +101,15 @@ ul  { list-style: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: var(--cream);
-  border-bottom: 1px solid var(--beige);
-  padding-block: 1rem;
-  transition: box-shadow 0.3s, padding 0.3s;
+  padding-block: 1.1rem;
+  transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
 }
 .site-header.scrolled {
+  background: rgba(250,247,242,0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--sh-s);
-  padding-block: 0.75rem;
+  padding-block: 0.65rem;
 }
 
 .navbar {
@@ -162,11 +163,10 @@ ul  { list-style: none; }
 }
 .nav-links a:not(.btn):hover { color: var(--tan); }
 
-/* Book Now button — distinct from text links */
-.btn-nav {
-  padding: 0.55rem 1.4rem;
-  font-size: 0.78rem;
-  border-radius: 4px;
+/* Book Now — plain text link, accented */
+.nav-book {
+  color: var(--tan) !important;
+  font-weight: 600 !important;
 }
 
 /* Hamburger — hidden on desktop */
