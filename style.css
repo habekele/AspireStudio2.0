@@ -166,6 +166,7 @@ ul  { list-style: none; }
 .btn-nav {
   padding: 0.55rem 1.4rem;
   font-size: 0.78rem;
+  border-radius: 4px;
 }
 
 /* Hamburger — hidden on desktop */
