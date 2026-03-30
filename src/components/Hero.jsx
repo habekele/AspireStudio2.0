@@ -20,7 +20,7 @@ export default function Hero() {
           <em className="text-gold font-normal italic" style={{ fontSize: '0.85em' }}>Studios</em>
         </h1>
 
-        <p className="font-sans text-[0.72rem] font-medium tracking-[0.26em] uppercase text-white/40">
+        <p className="font-sans text-[0.72rem] font-medium tracking-[0.26em] uppercase text-white/60">
           Hair &nbsp;·&nbsp; Lashes &nbsp;·&nbsp; Waxing &amp; Threading
         </p>
 
