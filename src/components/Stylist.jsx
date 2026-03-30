@@ -7,7 +7,7 @@ export default function Stylist() {
           {/* Photo */}
           <div className="rounded-3xl overflow-hidden shadow-l w-full max-w-sm mx-auto lg:max-w-none lg:h-[580px]">
             <img
-              src="/assets/tru.jpeg"
+              src={`${import.meta.env.BASE_URL}assets/tru.jpeg`}
               alt="Trualem Johnson, Master Stylist"
               className="w-full h-full object-cover object-top"
             />
