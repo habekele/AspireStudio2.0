@@ -23,7 +23,7 @@ export default function Nav() {
     : 'py-5'
 
   const textCls    = scrolled ? 'text-ink-2 hover:text-gold' : 'text-white/80 hover:text-gold'
-  const logoCls    = scrolled ? 'text-ink-2'  : 'text-white/92'
+  const logoCls    = scrolled ? 'text-ink-2'  : 'text-white/90'
   const cityCls    = scrolled ? 'text-smoke'  : 'text-white/60'
   const barCls     = scrolled ? 'bg-ink-2'    : 'bg-white/85'
 

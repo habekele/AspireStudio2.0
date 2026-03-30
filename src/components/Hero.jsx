@@ -16,7 +16,7 @@ export default function Hero() {
         </p>
 
         <h1 className="font-serif font-bold text-hero flex flex-col">
-          <span className="text-white/92 tracking-[-0.01em]">Aspire</span>
+          <span className="text-white/90 tracking-[-0.01em]">Aspire</span>
           <em className="text-gold font-normal italic" style={{ fontSize: '0.85em' }}>Studios</em>
         </h1>
 
