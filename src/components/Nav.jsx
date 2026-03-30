@@ -24,7 +24,7 @@ export default function Nav() {
 
   const textCls    = scrolled ? 'text-ink-2 hover:text-gold' : 'text-white/80 hover:text-gold'
   const logoCls    = scrolled ? 'text-ink-2'  : 'text-white/92'
-  const cityCls    = scrolled ? 'text-smoke'  : 'text-white/40'
+  const cityCls    = scrolled ? 'text-smoke'  : 'text-white/60'
   const barCls     = scrolled ? 'bg-ink-2'    : 'bg-white/85'
 
   return (

@@ -16,7 +16,7 @@ export default function Contact() {
 
           {/* Info */}
           <div>
-            <span className="block font-sans text-[0.65rem] font-bold tracking-[0.28em] uppercase text-gold/80 mb-2">
+            <span className="block font-sans text-[0.65rem] font-bold tracking-[0.28em] uppercase text-gold mb-2">
               Find Us
             </span>
             <h2 className="font-serif text-display font-semibold text-white/90 mb-10">
@@ -26,34 +26,34 @@ export default function Contact() {
             <div className="flex flex-col gap-7 mb-10">
 
               <div>
-                <span className="block font-sans text-[0.6rem] font-bold tracking-[0.24em] uppercase text-gold/70 mb-1">Address</span>
-                <span className="font-sans text-[0.92rem] text-white/70 leading-relaxed">
+                <span className="block font-sans text-[0.6rem] font-bold tracking-[0.24em] uppercase text-gold/90 mb-1">Address</span>
+                <span className="font-sans text-[0.92rem] text-white/85 leading-relaxed">
                   3500 W 51st Street, Suite #16<br />Sioux Falls, SD 57106
                 </span>
               </div>
 
               <div>
-                <span className="block font-sans text-[0.6rem] font-bold tracking-[0.24em] uppercase text-gold/70 mb-1">Phone</span>
-                <a href="tel:+16052151475" className="font-sans text-[0.92rem] text-white/70 hover:text-gold transition-colors duration-200">
+                <span className="block font-sans text-[0.6rem] font-bold tracking-[0.24em] uppercase text-gold/90 mb-1">Phone</span>
+                <a href="tel:+16052151475" className="font-sans text-[0.92rem] text-white/85 hover:text-gold transition-colors duration-200">
                   (605) 215-1475
                 </a>
               </div>
 
               <div>
-                <span className="block font-sans text-[0.6rem] font-bold tracking-[0.24em] uppercase text-gold/70 mb-1">Email</span>
-                <a href="mailto:aspirestudio605@gmail.com" className="font-sans text-[0.92rem] text-white/70 hover:text-gold transition-colors duration-200">
+                <span className="block font-sans text-[0.6rem] font-bold tracking-[0.24em] uppercase text-gold/90 mb-1">Email</span>
+                <a href="mailto:aspirestudio605@gmail.com" className="font-sans text-[0.92rem] text-white/85 hover:text-gold transition-colors duration-200">
                   aspirestudio605@gmail.com
                 </a>
               </div>
 
               <div>
-                <span className="block font-sans text-[0.6rem] font-bold tracking-[0.24em] uppercase text-gold/70 mb-2">Hours</span>
+                <span className="block font-sans text-[0.6rem] font-bold tracking-[0.24em] uppercase text-gold/90 mb-2">Hours</span>
                 <table className="font-sans text-sm">
                   <tbody>
                     {HOURS.map(([day, time]) => (
                       <tr key={day}>
                         <td className="pr-6 py-[3px] font-medium text-white/80 w-28">{day}</td>
-                        <td className="py-[3px] text-white/55">{time}</td>
+                        <td className="py-[3px] text-white/75">{time}</td>
                       </tr>
                     ))}
                   </tbody>

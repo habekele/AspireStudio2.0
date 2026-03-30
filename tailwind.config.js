@@ -13,7 +13,7 @@ export default {
         card: '#FBF7F1',
         gold: '#C4956A',
         bronze: '#8C6240',
-        smoke: '#9B8472',
+        smoke: '#6B4830',
         footer: '#100803',
       },
       fontFamily: {
