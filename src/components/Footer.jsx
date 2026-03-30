@@ -5,7 +5,7 @@ export default function Footer() {
 
         <div className="flex flex-wrap items-center justify-between gap-6">
           <div className="flex flex-col gap-1">
-            <span className="font-serif text-xl font-bold text-white/88">Aspire Studios</span>
+            <span className="font-serif text-xl font-bold text-white/90">Aspire Studios</span>
             <span className="font-sans text-[0.54rem] font-semibold tracking-[0.22em] uppercase text-white/55">
               Sioux Falls, SD &nbsp;·&nbsp; (605) 215-1475
             </span>
