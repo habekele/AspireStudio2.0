@@ -2,50 +2,46 @@ export default function Stylist() {
   return (
     <section id="stylist" className="bg-bg py-24 px-6 md:px-8">
       <div className="max-w-site mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
           {/* Photo */}
           <div className="relative">
-            <div className="rounded-3xl overflow-hidden shadow-l aspect-[4/5] lg:aspect-[3/4]">
+            {/* Soft blush background shape */}
+            <div className="absolute -inset-4 rounded-[36px] bg-petal/50 -z-10" />
+            <div className="rounded-[28px] overflow-hidden aspect-[4/5]">
               <img
                 src={`${import.meta.env.BASE_URL}assets/aspirestudiopic.jpg`}
                 alt="Trualem Johnson, Master Stylist"
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            {/* Floating badge */}
-            <div className="absolute bottom-6 left-6 bg-surface/95 backdrop-blur-sm rounded-2xl px-5 py-3.5 shadow-m border border-border">
-              <p className="font-sans text-[0.68rem] font-semibold tracking-[0.16em] uppercase text-clay">Master Stylist</p>
-              <p className="font-serif text-base font-semibold text-charcoal mt-0.5">Trualem Johnson</p>
-            </div>
           </div>
 
           {/* Bio */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-7">
             <div>
-              <p className="font-sans text-[0.65rem] font-semibold tracking-[0.24em] uppercase text-clay mb-3">
-                Meet Your Stylist
-              </p>
-              <h2 className="font-serif text-display text-charcoal">
-                Trualem Johnson
-              </h2>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-px w-8 bg-blush" />
+                <span className="font-sans text-[0.62rem] font-light tracking-[0.28em] uppercase text-muted">Meet Your Stylist</span>
+              </div>
+              <h2 className="font-serif font-light text-display text-text">Trualem Johnson</h2>
+              <p className="font-sans text-xs font-light tracking-[0.18em] uppercase text-rose mt-2">Master Stylist &amp; Founder</p>
             </div>
 
             <div className="space-y-4">
-              <p className="font-sans text-[0.95rem] text-muted leading-[1.8]">
+              <p className="font-sans text-sm font-light text-stone leading-[1.85]">
                 Born in Ethiopia and raised with a deep appreciation for beauty, culture, and craft, Trualem brings her passion and artistry to every client she touches.
               </p>
-              <p className="font-sans text-[0.95rem] text-muted leading-[1.8]">
+              <p className="font-sans text-sm font-light text-stone leading-[1.85]">
                 Since making Sioux Falls her home, she has built a reputation for transformative styles, flawless lash work, and an experience that always makes clients feel seen and celebrated.
               </p>
             </div>
 
-            {/* Credentials row */}
-            <div className="flex gap-6 py-5 border-y border-border">
-              {[['Hair', 'Colors & Cuts'], ['Lashes', 'Extensions'], ['Waxing', '& Threading']].map(([label, sub]) => (
-                <div key={label}>
-                  <p className="font-sans text-xs font-semibold text-charcoal">{label}</p>
-                  <p className="font-sans text-xs text-muted">{sub}</p>
+            <div className="flex gap-8 py-6 border-y border-border">
+              {[['Hair', 'Colors & Cuts'], ['Lashes', 'Extensions'], ['Waxing', '& Threading']].map(([s, d]) => (
+                <div key={s}>
+                  <p className="font-serif font-medium text-sm text-text">{s}</p>
+                  <p className="font-sans text-xs font-light text-muted mt-0.5">{d}</p>
                 </div>
               ))}
             </div>
@@ -54,12 +50,9 @@ export default function Stylist() {
               href="https://aspirestudio.square.site/"
               target="_blank"
               rel="noopener"
-              className="self-start inline-flex items-center gap-2 px-6 py-3 rounded-full bg-clay text-white font-sans text-sm font-semibold tracking-wide transition-all duration-200 hover:bg-clay-dark hover:shadow-m hover:-translate-y-px"
+              className="self-start inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-text text-bg font-sans text-sm font-medium tracking-wide transition-all duration-200 hover:bg-stone hover:-translate-y-px hover:shadow-m"
             >
               Book with Tru
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M3 8h10M9 4l4 4-4 4"/>
-              </svg>
             </a>
           </div>
 
