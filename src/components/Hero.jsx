@@ -1,44 +1,55 @@
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center justify-center text-center bg-ink px-8 py-32 overflow-hidden"
-    >
-      {/* Subtle radial glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(196,149,106,0.08), transparent 70%)' }}
-      />
+    <section id="hero" className="bg-bg min-h-screen flex flex-col justify-center pt-[68px] px-6 md:px-8">
+      <div className="max-w-site mx-auto w-full py-20">
 
-      <div className="relative flex flex-col items-center gap-8 max-w-3xl w-full">
-        <p className="font-sans text-[0.65rem] font-bold tracking-[0.32em] uppercase text-gold/80">
-          Sioux Falls, South Dakota
-        </p>
+        {/* Eyebrow */}
+        <div className="flex items-center gap-3 mb-8">
+          <div className="h-px w-10 bg-blush" />
+          <span className="font-sans text-[0.62rem] font-light tracking-[0.3em] uppercase text-muted">
+            Sioux Falls, South Dakota
+          </span>
+        </div>
 
-        <h1 className="font-serif font-bold text-hero flex flex-col">
-          <span className="text-white/90 tracking-[-0.01em]">Aspire</span>
-          <em className="text-gold font-normal italic" style={{ fontSize: '0.85em' }}>Studios</em>
+        {/* Headline */}
+        <h1 className="font-serif font-light text-hero text-text mb-10">
+          Where beauty<br />
+          meets <em className="text-rose italic">artistry.</em>
         </h1>
 
-        <p className="font-sans text-[0.72rem] font-medium tracking-[0.26em] uppercase text-white/60">
-          Hair &nbsp;·&nbsp; Lashes &nbsp;·&nbsp; Waxing &amp; Threading
-        </p>
+        {/* Sub row */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10 mb-12">
+          <p className="font-sans text-sm font-light text-muted tracking-wide">
+            Hair · Lash Extensions · Waxing &amp; Threading
+          </p>
+          <div className="hidden sm:block h-3 w-px bg-border" />
+          <p className="font-sans text-sm font-light text-muted">By Trualem Johnson</p>
+        </div>
 
-        <a
-          href="https://aspirestudio.square.site/"
-          target="_blank"
-          rel="noopener"
-          className="mt-2 inline-block px-9 py-[0.85rem] rounded-full font-sans text-[0.8rem] font-semibold tracking-[0.12em] uppercase text-white border border-white/55 transition-all duration-200 hover:bg-gold hover:border-gold hover:shadow-gold hover:-translate-y-0.5"
-        >
-          Book an Appointment
-        </a>
+        {/* CTA */}
+        <div className="flex items-center gap-5">
+          <a
+            href="https://aspirestudio.square.site/"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-text text-bg font-sans text-sm font-medium tracking-wide transition-all duration-200 hover:bg-stone hover:-translate-y-px hover:shadow-m"
+          >
+            Book an Appointment
+          </a>
+          <a
+            href="#services"
+            className="font-sans text-sm font-light text-stone hover:text-text transition-colors duration-150 flex items-center gap-1.5"
+          >
+            View services
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </a>
+        </div>
+
+        {/* Decorative bottom line */}
+        <div className="mt-20 h-px bg-gradient-to-r from-blush via-border to-transparent" />
       </div>
-
-      {/* Scroll cue */}
-      <div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-16"
-        style={{ background: 'linear-gradient(to bottom, rgba(196,149,106,0.5), transparent)' }}
-      />
     </section>
   )
 }
