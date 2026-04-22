@@ -4,16 +4,13 @@ export default function Footer() {
       <div className="max-w-site mx-auto">
 
         <div className="flex flex-wrap justify-between gap-10 pb-10 border-b border-white/10">
-
-          {/* Brand */}
-          <div className="max-w-[220px]">
+          <div className="max-w-[200px]">
             <p className="font-serif font-light text-xl text-white tracking-[0.01em]">Aspire Studios</p>
-            <p className="font-sans text-xs font-light text-white/45 mt-1.5 leading-relaxed">
+            <p className="font-sans text-xs font-light text-white/45 mt-2 leading-relaxed">
               Premium salon services in Sioux Falls, South Dakota.
             </p>
           </div>
 
-          {/* Nav columns */}
           <div className="flex gap-12 flex-wrap">
             <div className="flex flex-col gap-3">
               <p className="font-sans text-[0.58rem] font-medium tracking-[0.2em] uppercase text-white/30 mb-1">Studio</p>
@@ -25,7 +22,7 @@ export default function Footer() {
               <p className="font-sans text-[0.58rem] font-medium tracking-[0.2em] uppercase text-white/30 mb-1">Connect</p>
               <a href="https://www.instagram.com/_aspirestudio?igsh=MXd1cjY0c3RmMmk0Yw==" target="_blank" rel="noopener" className="font-sans text-sm font-light text-white/55 hover:text-white/90 transition-colors duration-150">Instagram</a>
               <a href="https://www.facebook.com/share/1CJSzh9nTj/?mibextid=wwXIfr" target="_blank" rel="noopener" className="font-sans text-sm font-light text-white/55 hover:text-white/90 transition-colors duration-150">Facebook</a>
-              <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" className="font-sans text-sm font-light text-blush hover:text-white transition-colors duration-150">Book Online</a>
+              <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" className="font-sans text-sm font-light text-gold-light hover:text-white transition-colors duration-150">Book Online</a>
             </div>
           </div>
         </div>

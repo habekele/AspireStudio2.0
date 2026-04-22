@@ -1,31 +1,37 @@
+import { useInView } from '../hooks/useInView'
+
 export default function Stylist() {
+  const photoRef = useInView(0.1)
+  const bioRef   = useInView(0.1)
+
   return (
     <section id="stylist" className="bg-bg py-24 px-6 md:px-8">
       <div className="max-w-site mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
           {/* Photo */}
-          <div className="relative">
-            {/* Soft blush background shape */}
-            <div className="absolute -inset-4 rounded-[36px] bg-petal/50 -z-10" />
+          <div ref={photoRef} className="fade-up relative">
+            <div className="absolute -inset-4 rounded-[36px] bg-gold-mist/60 -z-10" />
             <div className="rounded-[28px] overflow-hidden aspect-[4/5]">
               <img
                 src={`${import.meta.env.BASE_URL}assets/aspirestudiopic.jpg`}
                 alt="Trualem Johnson, Master Stylist"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
               />
             </div>
           </div>
 
           {/* Bio */}
-          <div className="flex flex-col gap-7">
+          <div ref={bioRef} className="fade-up delay-1 flex flex-col gap-7">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-px w-8 bg-blush" />
+                <div className="h-px w-8 bg-gold/50" />
                 <span className="font-sans text-[0.62rem] font-light tracking-[0.28em] uppercase text-muted">Meet Your Stylist</span>
               </div>
               <h2 className="font-serif font-light text-display text-text">Trualem Johnson</h2>
-              <p className="font-sans text-xs font-light tracking-[0.18em] uppercase text-rose mt-2">Master Stylist &amp; Founder</p>
+              <p className="font-sans text-xs font-light tracking-[0.2em] uppercase text-gold mt-2">
+                Master Stylist &amp; Founder
+              </p>
             </div>
 
             <div className="space-y-4">
@@ -50,7 +56,7 @@ export default function Stylist() {
               href="https://aspirestudio.square.site/"
               target="_blank"
               rel="noopener"
-              className="self-start inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-text text-bg font-sans text-sm font-medium tracking-wide transition-all duration-200 hover:bg-stone hover:-translate-y-px hover:shadow-m"
+              className="self-start inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brown text-bg font-sans text-sm font-medium tracking-wide transition-all duration-200 hover:bg-brown-dark hover:shadow-gold hover:-translate-y-px"
             >
               Book with Tru
             </a>
