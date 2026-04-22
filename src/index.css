@@ -6,3 +6,36 @@
   html { scroll-behavior: smooth; }
   body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 }
+
+@layer utilities {
+  /* Scroll-triggered fade-up */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .fade-up.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .delay-1 { transition-delay: 100ms; }
+  .delay-2 { transition-delay: 210ms; }
+  .delay-3 { transition-delay: 320ms; }
+
+  /* Hero load animation */
+  @keyframes hero-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .hero-animate {
+    animation: hero-in 0.8s ease forwards;
+  }
+  .hero-animate-delay {
+    opacity: 0;
+    animation: hero-in 0.8s ease 0.25s forwards;
+  }
+  .hero-animate-delay-2 {
+    opacity: 0;
+    animation: hero-in 0.8s ease 0.45s forwards;
+  }
+}
