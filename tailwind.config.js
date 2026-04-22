@@ -4,37 +4,34 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: {
-          DEFAULT: '#1A0E06',
-          2: '#2C1A0E',
+        bg:      '#FAF9F7',
+        surface: '#FFFFFF',
+        sand:    '#F2E9DF',
+        clay: {
+          DEFAULT: '#C8704E',
+          dark:    '#AD5C3A',
+          mist:    '#F7EDE6',
         },
-        cream: '#FAF8F4',
-        warm: '#F0E6D3',
-        card: '#FBF7F1',
-        gold: '#C4956A',
-        bronze: '#8C6240',
-        smoke: '#6B4830',
-        footer: '#100803',
+        charcoal: '#1A1614',
+        stone:    '#3D3530',
+        muted:    '#7A6E68',
+        border:   '#E8DDD5',
+        ink:      '#120D0A',
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['Raleway', 'system-ui', 'sans-serif'],
+        sans:  ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        hero:    ['clamp(4.5rem, 11vw, 9.5rem)', { lineHeight: '0.88' }],
-        display: ['clamp(1.9rem, 3vw, 2.7rem)',  { lineHeight: '1.12' }],
+        hero:    ['clamp(4rem, 10vw, 8.5rem)', { lineHeight: '0.9',  letterSpacing: '-0.02em' }],
+        display: ['clamp(1.9rem, 3vw, 2.6rem)',  { lineHeight: '1.1',  letterSpacing: '-0.01em' }],
       },
-      maxWidth: {
-        site: '1120px',
-      },
-      borderRadius: {
-        '3xl': '28px',
-      },
+      maxWidth: { site: '1120px' },
       boxShadow: {
-        's': '0 2px 16px rgba(26,14,6,0.08)',
-        'm': '0 8px 32px rgba(26,14,6,0.14)',
-        'l': '0 20px 60px rgba(26,14,6,0.18)',
-        'gold': '0 8px 28px rgba(196,149,106,0.35)',
+        xs: '0 1px 4px rgba(20,12,8,0.06)',
+        s:  '0 2px 12px rgba(20,12,8,0.08)',
+        m:  '0 8px 28px rgba(20,12,8,0.12)',
+        l:  '0 20px 60px rgba(20,12,8,0.16)',
       },
     },
   },
