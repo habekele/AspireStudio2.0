@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/AspireStudio2.0/',
+  base: '/',
   build: {
     outDir: 'docs',
     emptyOutDir: true,
