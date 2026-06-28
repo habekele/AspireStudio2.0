@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 const LINKS = [
   ['#services', 'Services'],
@@ -10,6 +10,8 @@ const LINKS = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open,     setOpen]     = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 50)
@@ -19,13 +21,23 @@ export default function Nav() {
 
   // HashRouter owns the URL hash, so plain `#section` anchors don't scroll.
   // Scroll programmatically instead.
-  const goTo = (e, href) => {
-    e.preventDefault()
-    setOpen(false)
+  const scrollTo = (href) => {
     if (href === '#top') {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
       document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const goTo = (e, href) => {
+    e.preventDefault()
+    setOpen(false)
+    // Sections only exist on the home route; navigate there first if needed.
+    if (location.pathname !== '/') {
+      navigate('/')
+      setTimeout(() => scrollTo(href), 50)
+    } else {
+      scrollTo(href)
     }
   }
 

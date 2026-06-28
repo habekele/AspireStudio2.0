@@ -1,8 +1,20 @@
+import { useNavigate, useLocation } from 'react-router-dom'
+
 export default function Footer() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
   // HashRouter owns the URL hash, so scroll to sections programmatically.
+  // Sections only exist on the home route; navigate there first if needed.
   const goTo = (e, href) => {
     e.preventDefault()
-    document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+    const scroll = () => document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+    if (location.pathname !== '/') {
+      navigate('/')
+      setTimeout(scroll, 50)
+    } else {
+      scroll()
+    }
   }
 
   return (
