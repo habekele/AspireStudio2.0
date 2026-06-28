@@ -1,4 +1,10 @@
 export default function Footer() {
+  // HashRouter owns the URL hash, so scroll to sections programmatically.
+  const goTo = (e, href) => {
+    e.preventDefault()
+    document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <footer className="bg-ink px-6 md:px-8 py-14">
       <div className="max-w-site mx-auto">
@@ -15,7 +21,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <p className="font-sans text-[0.58rem] font-medium tracking-[0.2em] uppercase text-white/30 mb-1">Studio</p>
               {[['#services','Services'],['#stylist','Meet Tru'],['#contact','Contact']].map(([href, label]) => (
-                <a key={href} href={href} className="font-sans text-sm font-light text-white/55 hover:text-white/90 transition-colors duration-150">{label}</a>
+                <a key={href} href={href} onClick={(e) => goTo(e, href)} className="font-sans text-sm font-light text-white/55 hover:text-white/90 transition-colors duration-150">{label}</a>
               ))}
             </div>
             <div className="flex flex-col gap-3">

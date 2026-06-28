@@ -17,13 +17,25 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
+  // HashRouter owns the URL hash, so plain `#section` anchors don't scroll.
+  // Scroll programmatically instead.
+  const goTo = (e, href) => {
+    e.preventDefault()
+    setOpen(false)
+    if (href === '#top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 bg-bg/96 backdrop-blur-sm transition-all duration-300 ${
       scrolled ? 'border-b border-border shadow-xs' : ''
     }`}>
       <nav className="max-w-site mx-auto px-6 md:px-8 h-[68px] flex items-center justify-between">
 
-        <a href="#top" className="flex flex-col">
+        <a href="#top" onClick={(e) => goTo(e, '#top')} className="flex flex-col">
           <span className="font-serif text-[1.2rem] font-medium tracking-[0.01em] text-text leading-none">
             Aspire Studio
           </span>
@@ -35,7 +47,7 @@ export default function Nav() {
         <ul className="hidden md:flex items-center gap-9">
           {LINKS.map(([href, label]) => (
             <li key={href}>
-              <a href={href} className="font-sans text-[0.8rem] font-light text-stone hover:text-text transition-colors duration-150 tracking-wide">
+              <a href={href} onClick={(e) => goTo(e, href)} className="font-sans text-[0.8rem] font-light text-stone hover:text-text transition-colors duration-150 tracking-wide">
                 {label}
               </a>
             </li>
@@ -76,7 +88,7 @@ export default function Nav() {
           <ul className="max-w-site mx-auto px-6 py-1 flex flex-col">
             {LINKS.map(([href, label]) => (
               <li key={href} className="border-b border-border/60 last:border-0">
-                <a href={href} onClick={() => setOpen(false)} className="block py-3.5 font-sans text-sm font-light text-stone">
+                <a href={href} onClick={(e) => goTo(e, href)} className="block py-3.5 font-sans text-sm font-light text-stone">
                   {label}
                 </a>
               </li>
