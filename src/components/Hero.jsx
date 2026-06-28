@@ -35,9 +35,11 @@ export default function Hero() {
         {/* CTAs */}
         <div className="hero-animate-delay-2 flex flex-wrap items-center gap-4">
           <a
-            href="https://aspirestudio.square.site/"
-            target="_blank"
-            rel="noopener"
+            href="#book"
+            onClick={(e) => {
+              e.preventDefault()
+              document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' })
+            }}
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brown text-bg font-sans text-sm font-medium tracking-wide transition-all duration-200 hover:bg-brown-dark hover:shadow-gold hover:-translate-y-px"
           >
             Book an Appointment
