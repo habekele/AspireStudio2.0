@@ -18,7 +18,7 @@ export default function Hero() {
         {/* Headline */}
         <h1 className="hero-animate-delay font-serif font-light text-hero text-text mb-9">
           Aspire<br />
-          <em className="text-gold not-italic">Studios.</em>
+          <em className="text-gold not-italic">Studio.</em>
         </h1>
 
         {/* Tagline + services */}
@@ -44,6 +44,10 @@ export default function Hero() {
           </a>
           <a
             href="#services"
+            onClick={(e) => {
+              e.preventDefault()
+              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+            }}
             className="inline-flex items-center gap-1.5 font-sans text-sm font-light text-stone hover:text-text transition-colors duration-150"
           >
             View services
