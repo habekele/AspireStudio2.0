@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Aspire Studios is a static marketing site for a premium salon in Sioux Falls, SD. It is a single-page React app built with Vite, styled entirely with Tailwind CSS, and deployed as a static build to GitHub Pages at `aspirestudiollc.com`. The `/docs` directory is the Vite build output committed to git; GitHub Pages serves from there.
+Aspire Studio is a static marketing site for a premium salon in Sioux Falls, SD. It is a single-page React app built with Vite, styled entirely with Tailwind CSS, and deployed as a static build to GitHub Pages at `aspirestudiollc.com`. The `/docs` directory is the Vite build output committed to git; GitHub Pages serves from there.
 
 ## Commands
 

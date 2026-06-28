@@ -25,7 +25,7 @@ export default function Nav() {
 
         <a href="#top" className="flex flex-col">
           <span className="font-serif text-[1.2rem] font-medium tracking-[0.01em] text-text leading-none">
-            Aspire Studios
+            Aspire Studio
           </span>
           <span className="font-sans text-[0.5rem] font-light tracking-[0.25em] uppercase text-muted mt-[3px]">
             Sioux Falls, SD
