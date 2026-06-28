@@ -63,11 +63,9 @@ export default function Contact() {
             </div>
 
             <a
-              href="#book"
-              onClick={(e) => {
-                e.preventDefault()
-                document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' })
-              }}
+              href="https://aspirestudio.square.site/"
+              target="_blank"
+              rel="noopener"
               className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-brown text-bg font-sans text-sm font-medium tracking-wide transition-all duration-200 hover:bg-brown-dark hover:shadow-gold"
             >
               Book Online

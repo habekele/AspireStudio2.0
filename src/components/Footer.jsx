@@ -40,7 +40,7 @@ export default function Footer() {
               <p className="font-sans text-[0.58rem] font-medium tracking-[0.2em] uppercase text-white/30 mb-1">Connect</p>
               <a href="https://www.instagram.com/_aspirestudio?igsh=MXd1cjY0c3RmMmk0Yw==" target="_blank" rel="noopener" className="font-sans text-sm font-light text-white/55 hover:text-white/90 transition-colors duration-150">Instagram</a>
               <a href="https://www.facebook.com/share/1CJSzh9nTj/?mibextid=wwXIfr" target="_blank" rel="noopener" className="font-sans text-sm font-light text-white/55 hover:text-white/90 transition-colors duration-150">Facebook</a>
-              <a href="#book" onClick={(e) => goTo(e, '#book')} className="font-sans text-sm font-light text-gold-light hover:text-white transition-colors duration-150">Book Online</a>
+              <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" className="font-sans text-sm font-light text-gold-light hover:text-white transition-colors duration-150">Book Online</a>
             </div>
           </div>
         </div>
