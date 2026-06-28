@@ -82,7 +82,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Aspire Studios location"
+              title="Aspire Studio location"
             />
           </div>
 

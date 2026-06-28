@@ -5,7 +5,7 @@ export default function Footer() {
 
         <div className="flex flex-wrap justify-between gap-10 pb-10 border-b border-white/10">
           <div className="max-w-[200px]">
-            <p className="font-serif font-light text-xl text-white tracking-[0.01em]">Aspire Studios</p>
+            <p className="font-serif font-light text-xl text-white tracking-[0.01em]">Aspire Studio</p>
             <p className="font-sans text-xs font-light text-white/45 mt-2 leading-relaxed">
               Premium salon services in Sioux Falls, South Dakota.
             </p>
@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-wrap items-center justify-between gap-4">
-          <p className="font-sans text-xs font-light text-white/30">© 2026 Aspire Studios. All rights reserved.</p>
+          <p className="font-sans text-xs font-light text-white/30">© 2026 Aspire Studio. All rights reserved.</p>
           <p className="font-sans text-xs font-light text-white/20">3500 W 51st St, Suite #16 · Sioux Falls, SD</p>
         </div>
 
