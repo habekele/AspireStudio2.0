@@ -4,7 +4,6 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import Stylist from './components/Stylist'
 import Contact from './components/Contact'
-import Booking from './components/Booking'
 import Footer from './components/Footer'
 import AmazonPicks from './pages/AmazonPicks'
 
@@ -17,7 +16,6 @@ function HomePage() {
         <Services />
         <Stylist />
         <Contact />
-        <Booking />
       </main>
       <Footer />
     </>
