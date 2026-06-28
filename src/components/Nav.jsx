@@ -74,9 +74,8 @@ export default function Nav() {
           </li>
           <li>
             <a
-              href="https://aspirestudio.square.site/"
-              target="_blank"
-              rel="noopener"
+              href="#book"
+              onClick={(e) => goTo(e, '#book')}
               className="font-sans text-[0.78rem] font-medium text-gold hover:text-gold-dark transition-colors duration-150"
             >
               Book Now
@@ -111,7 +110,7 @@ export default function Nav() {
               </Link>
             </li>
             <li className="py-3.5">
-              <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" onClick={() => setOpen(false)} className="font-sans text-sm font-medium text-gold">
+              <a href="#book" onClick={(e) => goTo(e, '#book')} className="font-sans text-sm font-medium text-gold">
                 Book Now
               </a>
             </li>
