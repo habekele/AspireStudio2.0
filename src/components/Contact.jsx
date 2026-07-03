@@ -75,7 +75,7 @@ export default function Contact() {
           {/* Map */}
           <div ref={mapRef} className="fade-up delay-1 rounded-3xl overflow-hidden border border-border shadow-s min-h-[420px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878!2d-96.7717!3d43.4935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3500%20W%2051st%20St%20Suite%2016%2C%20Sioux%20Falls%2C%20SD%2057106!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps?q=3500+W+51st+St+Suite+16,+Sioux+Falls,+SD+57106&output=embed"
               width="100%"
               height="100%"
               className="w-full h-full min-h-[420px] border-0"

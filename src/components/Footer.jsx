@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-wrap items-center justify-between gap-4">
-          <p className="font-sans text-xs font-light text-white/30">© 2026 Aspire Studio. All rights reserved.</p>
+          <p className="font-sans text-xs font-light text-white/30">© {new Date().getFullYear()} Aspire Studio. All rights reserved.</p>
           <p className="font-sans text-xs font-light text-white/20">3500 W 51st St, Suite #16 · Sioux Falls, SD</p>
         </div>
 

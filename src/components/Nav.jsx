@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 const LINKS = [
@@ -12,12 +12,27 @@ export default function Nav() {
   const [open,     setOpen]     = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
+  const headerRef = useRef(null)
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', fn, { passive: true })
     return () => window.removeEventListener('scroll', fn)
   }, [])
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
+    const onClick = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) setOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    document.addEventListener('pointerdown', onClick)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.removeEventListener('pointerdown', onClick)
+    }
+  }, [open])
 
   // HashRouter owns the URL hash, so plain `#section` anchors don't scroll.
   // Scroll programmatically instead.
@@ -42,7 +57,7 @@ export default function Nav() {
   }
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-bg/96 backdrop-blur-sm transition-all duration-300 ${
+    <header ref={headerRef} className={`fixed top-0 left-0 right-0 z-50 bg-bg/96 backdrop-blur-sm transition-all duration-300 ${
       scrolled ? 'border-b border-border shadow-xs' : ''
     }`}>
       <nav className="max-w-site mx-auto px-6 md:px-8 h-[68px] flex items-center justify-between">
@@ -88,6 +103,7 @@ export default function Nav() {
           onClick={() => setOpen(o => !o)}
           className="md:hidden w-8 h-8 flex flex-col justify-center gap-[5px] bg-transparent border-0 cursor-pointer"
           aria-label="Menu"
+          aria-expanded={open}
         >
           <span className={`block h-px bg-text transition-all duration-200 ${open ? 'w-5 translate-y-[6px] rotate-45' : 'w-5'}`} />
           <span className={`block h-px bg-text transition-all duration-200 ${open ? 'opacity-0 w-5' : 'w-4'}`} />
