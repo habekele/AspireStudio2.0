@@ -16,6 +16,10 @@ export default function Stylist() {
               <img
                 src={`${import.meta.env.BASE_URL}assets/aspirestudiopic.jpg`}
                 alt="Trualem Johnson, Master Stylist"
+                width="1100"
+                height="1650"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
               />
             </div>

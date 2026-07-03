@@ -32,7 +32,7 @@ function ProductCard({ product }) {
           {product.description}
         </p>
         <a
-          href={product.affiliateUrl}
+          href={product.url}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-gold text-white font-sans text-sm font-medium hover:bg-gold-dark transition-colors duration-200"
@@ -66,7 +66,7 @@ export default function AmazonPicks() {
               Tru's Picks
             </h1>
             <p className="font-sans text-sm font-light text-muted max-w-md mx-auto leading-relaxed">
-              Products I genuinely use and love — for clients and myself. Every link is an Amazon affiliate link, which means I earn a small commission at no extra cost to you.
+              Products I genuinely use and love — for clients and myself. Each link takes you straight to Amazon so you can shop them yourself.
             </p>
           </div>
         </section>
@@ -110,10 +110,10 @@ export default function AmazonPicks() {
           </div>
         </section>
 
-        {/* Disclosure */}
+        {/* Note */}
         <div className="max-w-site mx-auto px-6 md:px-8 pb-12">
           <p className="font-sans text-[0.7rem] text-muted/70 text-center">
-            As an Amazon Associate I earn from qualifying purchases. Prices and availability are subject to change.
+            Prices and availability are subject to change on Amazon.
           </p>
         </div>
       </main>

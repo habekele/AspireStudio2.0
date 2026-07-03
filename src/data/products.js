@@ -5,7 +5,7 @@ export const products = [
     description: "My go-to at-home treatment for strengthening and repairing damaged hair between salon visits. A little goes a long way.",
     category: "Hair Care",
     image: "https://m.media-amazon.com/images/I/61lCRsHBGcL._SL1500_.jpg",
-    affiliateUrl: "https://amzn.to/placeholder1",
+    url: "https://www.amazon.com/s?k=Olaplex+No.+3+Hair+Perfector",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const products = [
     description: "Worth every penny. I use this on clients daily — it curls, waves, and smooths without extreme heat so hair stays healthy.",
     category: "Tools",
     image: "https://m.media-amazon.com/images/I/71r7IBKQ0LL._SL1500_.jpg",
-    affiliateUrl: "https://amzn.to/placeholder2",
+    url: "https://www.amazon.com/s?k=Dyson+Airwrap+Complete+Styler",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const products = [
     description: "The OG finishing oil. A tiny drop tames frizz, adds incredible shine, and smells absolutely amazing.",
     category: "Hair Care",
     image: "https://m.media-amazon.com/images/I/61nEEeoMVKL._SL1200_.jpg",
-    affiliateUrl: "https://amzn.to/placeholder3",
+    url: "https://www.amazon.com/s?k=Moroccanoil+Treatment+Original",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const products = [
     description: "A dermatologist favorite I recommend to every client. Deeply hydrating, fragrance-free, and gentle enough for sensitive skin.",
     category: "Skincare",
     image: "https://m.media-amazon.com/images/I/71FLUNXeAPL._SL1500_.jpg",
-    affiliateUrl: "https://amzn.to/placeholder4",
+    url: "https://www.amazon.com/s?k=CeraVe+Moisturizing+Cream",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const products = [
     description: "The secret to salon-worthy nails at home. Strengthens brittle nails and works beautifully as a base coat.",
     category: "Nails",
     image: "https://m.media-amazon.com/images/I/71u4f1EJ+NL._SL1500_.jpg",
-    affiliateUrl: "https://amzn.to/placeholder5",
+    url: "https://www.amazon.com/s?k=OPI+Nail+Envy+Nail+Strengthener",
   },
   {
     id: 6,
@@ -45,6 +45,6 @@ export const products = [
     description: "My personal daily SPF. Lightweight, non-greasy, and perfect under makeup. Protects without clogging pores.",
     category: "Skincare",
     image: "https://m.media-amazon.com/images/I/61nQ0oZFGqL._SL1500_.jpg",
-    affiliateUrl: "https://amzn.to/placeholder6",
+    url: "https://www.amazon.com/s?k=EltaMD+UV+Clear+SPF+46",
   },
 ]
