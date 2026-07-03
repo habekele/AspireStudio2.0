@@ -19,7 +19,7 @@ There are no tests and no linter configured in this project.
 
 ## Architecture
 
-**Routing**: `App.jsx` uses `HashRouter` (react-router-dom) with two routes: `/` (the home page) and `/picks` (the `AmazonPicks` affiliate-products page in `src/pages/`, backed by hardcoded data in `src/data/products.js`). HashRouter is used because GitHub Pages cannot rewrite arbitrary paths to `index.html`.
+**Routing**: `App.jsx` uses `HashRouter` (react-router-dom) with two routes: `/` (the home page) and `/picks` (the `AmazonPicks` product-recommendations page in `src/pages/`, backed by hardcoded data in `src/data/products.js`). HashRouter is used because GitHub Pages cannot rewrite arbitrary paths to `index.html`.
 
 **Home page layout**: `HomePage` in `App.jsx` composes all sections in order — `Nav`, `Hero`, `Services`, `Stylist`, `Contact`, `Footer`. Section navigation (`#services`, `#stylist`, `#contact`) happens programmatically via `scrollIntoView` in `Nav.jsx`/`Footer.jsx` because HashRouter owns the URL hash; if the user is on `/picks`, those handlers navigate to `/` first, then scroll.
 
