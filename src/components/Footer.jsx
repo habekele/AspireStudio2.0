@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 export default function Footer() {
   const navigate = useNavigate()
@@ -32,7 +32,8 @@ export default function Footer() {
           <div className="flex gap-12 flex-wrap">
             <div className="flex flex-col gap-3">
               <p className="font-sans text-[0.58rem] font-medium tracking-[0.2em] uppercase text-white/30 mb-1">Studio</p>
-              {[['#services','Services'],['#stylist','Meet Tru'],['#contact','Contact']].map(([href, label]) => (
+              <Link to="/services" className="font-sans text-sm font-light text-white/55 hover:text-white/90 transition-colors duration-150">Services</Link>
+              {[['#stylist','Meet Tru'],['#contact','Contact']].map(([href, label]) => (
                 <a key={href} href={href} onClick={(e) => goTo(e, href)} className="font-sans text-sm font-light text-white/55 hover:text-white/90 transition-colors duration-150">{label}</a>
               ))}
             </div>

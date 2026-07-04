@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 const LINKS = [
-  ['#services', 'Services'],
   ['#stylist',  'Meet Tru'],
   ['#contact',  'Contact'],
 ]
@@ -72,6 +71,14 @@ export default function Nav() {
         </a>
 
         <ul className="hidden md:flex items-center gap-9">
+          <li>
+            <Link
+              to="/services"
+              className="font-sans text-[0.8rem] font-light text-stone hover:text-text transition-colors duration-150 tracking-wide"
+            >
+              Services
+            </Link>
+          </li>
           {LINKS.map(([href, label]) => (
             <li key={href}>
               <a href={href} onClick={(e) => goTo(e, href)} className="font-sans text-[0.8rem] font-light text-stone hover:text-text transition-colors duration-150 tracking-wide">
@@ -114,6 +121,11 @@ export default function Nav() {
       {open && (
         <div className="md:hidden bg-bg border-t border-border shadow-s">
           <ul className="max-w-site mx-auto px-6 py-1 flex flex-col">
+            <li className="border-b border-border/60">
+              <Link to="/services" onClick={() => setOpen(false)} className="block py-3.5 font-sans text-sm font-light text-stone">
+                Services
+              </Link>
+            </li>
             {LINKS.map(([href, label]) => (
               <li key={href} className="border-b border-border/60 last:border-0">
                 <a href={href} onClick={(e) => goTo(e, href)} className="block py-3.5 font-sans text-sm font-light text-stone">
