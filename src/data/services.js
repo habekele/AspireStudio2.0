@@ -24,8 +24,8 @@ export const majorServices = [
     title: 'Lash Extensions',
     subtitle: 'Volume & Precision',
     description:
-      'Classic, hybrid, volume, and mega volume sets — each lash placed individually for a look that’s full, feather-light, and unmistakably yours. Whether you want everyday definition or full-glam drama, your set is mapped to your eye shape and lifestyle, with fills to keep it flawless.',
-    tags: ['Classic', 'Hybrid', 'Volume', 'Mega Volume', 'Fills'],
+      'Classic, hybrid, and volume sets — each lash placed individually for a look that’s full, feather-light, and unmistakably yours. Whether you want everyday definition or full-glam drama, your set is mapped to your eye shape and lifestyle, with fills to keep it flawless.',
+    tags: ['Classic', 'Hybrid', 'Volume', 'Fills'],
     image:
       'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80',
     imageAlt: 'Close-up of long, defined eyelashes',
@@ -37,7 +37,7 @@ export const majorServices = [
     subtitle: 'Brows & Face',
     description:
       'Clean lines and soft skin, without the guesswork. Brows are shaped to frame your face — not just follow a trend — using precise waxing or traditional threading, whichever suits your skin best. Quick, gentle facial services that finish any look.',
-    tags: ['Brow Shaping', 'Brow Wax', 'Threading', 'Facial Wax'],
+    tags: ['Brow Wax', 'Brow Tint', 'Threading', 'Facial Wax'],
     image:
       'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=900&q=80',
     imageAlt: 'Client receiving a brow and facial beauty treatment',
@@ -46,41 +46,51 @@ export const majorServices = [
 
 export const menu = [
   {
-    category: 'Hair',
+    category: 'Cuts & Styling',
     items: [
       { name: 'Women’s Haircut' },
       { name: 'Men’s Haircut' },
-      { name: 'Kids’ Haircut' },
-      { name: 'All-Over Color' },
-      { name: 'Root Touch-Up' },
-      { name: 'Partial Highlights' },
-      { name: 'Full Highlights' },
+      { name: 'Kids Haircut', note: '10 & under' },
+      { name: 'Wash & Style' },
+      { name: 'Formal Style' },
+      { name: 'Wedding Hair' },
+    ],
+  },
+  {
+    category: 'Color & Highlights',
+    items: [
+      { name: 'All Over Color' },
+      { name: 'Root Touch Up' },
+      { name: 'Gloss' },
+      { name: 'Partial Highlight' },
+      { name: 'Full Head Highlights' },
+      { name: 'Base Color + Partial Highlights' },
       { name: 'Balayage' },
-      { name: 'Deep-Conditioning Treatment' },
-      { name: 'Blowout & Style' },
-      { name: 'Special-Occasion Style' },
+      { name: 'Hair Color Correction' },
+      { name: 'Consult' },
     ],
   },
   {
     category: 'Lashes',
     items: [
-      { name: 'Classic Full Set' },
-      { name: 'Hybrid Full Set' },
-      { name: 'Volume Full Set' },
-      { name: 'Mega Volume Full Set' },
-      { name: 'Lash Fill', note: '2 or 3 week' },
-      { name: 'Lash Removal' },
+      { name: 'Classic Lash Full Set' },
+      { name: 'Classic Lash Fill' },
+      { name: 'Hybrid Lash Full Set' },
+      { name: 'Hybrid Lash Fill' },
+      { name: 'Volume Lash Full Set' },
+      { name: 'Volume Lash Fill' },
     ],
   },
   {
-    category: 'Waxing & Threading',
+    category: 'Brows & Face',
     items: [
-      { name: 'Brow Wax & Shape' },
+      { name: 'Brow Wax' },
+      { name: 'Brow Tint' },
       { name: 'Brow Threading' },
-      { name: 'Upper Lip Wax' },
+      { name: 'Brow + Lip Wax' },
       { name: 'Lip Threading' },
-      { name: 'Chin Wax' },
-      { name: 'Full-Face Wax' },
+      { name: 'Lip + Chin Wax' },
+      { name: 'Makeup' },
     ],
   },
 ]
