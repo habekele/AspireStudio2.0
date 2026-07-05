@@ -6,6 +6,7 @@ import Stylist from './components/Stylist'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import AmazonPicks from './pages/AmazonPicks'
+import ServicesPage from './pages/ServicesPage'
 
 function HomePage() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/picks" element={<AmazonPicks />} />
       </Routes>
     </HashRouter>

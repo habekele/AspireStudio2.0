@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useInView } from '../hooks/useInView'
 
 const SERVICES = [
@@ -68,17 +69,15 @@ function ServiceRow({ number, title, subtitle, desc, tags, rowRef, delay }) {
         </div>
 
         {/* Arrow — desktop */}
-        <a
-          href="https://aspirestudio.square.site/"
-          target="_blank"
-          rel="noopener"
-          aria-label={`Book ${title}`}
+        <Link
+          to="/services"
+          aria-label={`Learn more about ${title}`}
           className="hidden md:flex items-center justify-center w-8 h-8 rounded-full text-muted/50 group-hover:text-gold group-hover:translate-x-1 transition-all duration-200"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M3 8h10M9 4l4 4-4 4"/>
           </svg>
-        </a>
+        </Link>
 
       </div>
     </div>
@@ -131,14 +130,12 @@ export default function Services() {
         <div ref={ctaRef} className="fade-up flex items-center justify-between pt-2">
           <div className="flex items-center gap-3">
             <div className="h-px w-8 bg-gold/40" />
-            <a
-              href="https://aspirestudio.square.site/"
-              target="_blank"
-              rel="noopener"
+            <Link
+              to="/services"
               className="font-sans text-sm font-light text-stone hover:text-gold transition-colors duration-150 tracking-wide"
             >
-              View full menu &amp; pricing
-            </a>
+              View the full service menu
+            </Link>
           </div>
           <a
             href="https://aspirestudio.square.site/"
