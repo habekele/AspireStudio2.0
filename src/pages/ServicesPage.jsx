@@ -18,6 +18,8 @@ function FeatureRow({ service, flip }) {
           <img
             src={service.image}
             alt={service.imageAlt}
+            width={service.imageWidth}
+            height={service.imageHeight}
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
@@ -112,10 +114,24 @@ export default function ServicesPage() {
   // Reset scroll when arriving from a scrolled position on another route.
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
+  // HashRouter serves every route from the same index.html, so swap the
+  // document title and meta description here and restore them on leave.
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="description"]')
+    const prevTitle = document.title
+    const prevDesc = meta?.getAttribute('content')
+    document.title = 'Services | Aspire Studio | Sioux Falls, SD'
+    meta?.setAttribute('content', 'Explore the full Aspire Studio service menu — hair color and cuts, classic to volume lash extensions, and waxing & threading by Trualem Johnson in Sioux Falls, SD.')
+    return () => {
+      document.title = prevTitle
+      if (prevDesc) meta?.setAttribute('content', prevDesc)
+    }
+  }, [])
+
   return (
     <>
       <Nav />
-      <main className="bg-bg min-h-screen pt-[68px]">
+      <main id="main" tabIndex={-1} className="bg-bg min-h-screen pt-[68px] outline-none">
 
         {/* Hero */}
         <section className="py-16 md:py-24 text-center px-6 border-b border-border">

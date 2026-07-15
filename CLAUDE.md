@@ -19,11 +19,11 @@ There are no tests and no linter configured in this project.
 
 ## Architecture
 
-**Routing**: `App.jsx` uses `HashRouter` (react-router-dom) with two routes: `/` (the home page) and `/picks` (the `AmazonPicks` product-recommendations page in `src/pages/`, backed by hardcoded data in `src/data/products.js`). HashRouter is used because GitHub Pages cannot rewrite arbitrary paths to `index.html`.
+**Routing**: `App.jsx` uses `HashRouter` (react-router-dom) with two routes: `/` (the home page) and `/services` (the full service-menu page `src/pages/ServicesPage.jsx`, backed by hardcoded data in `src/data/services.js` — service copy, menu items, image paths/dimensions, and the Square booking URL all live there). Unknown paths redirect to `/`. HashRouter is used because GitHub Pages cannot rewrite arbitrary paths to `index.html`. `ServicesPage` swaps `document.title` and the meta description on mount (and restores them on unmount) since every route shares one `index.html`.
 
-**Home page layout**: `HomePage` in `App.jsx` composes all sections in order — `Nav`, `Hero`, `Services`, `Stylist`, `Contact`, `Footer`. Section navigation (`#services`, `#stylist`, `#contact`) happens programmatically via `scrollIntoView` in `Nav.jsx`/`Footer.jsx` because HashRouter owns the URL hash; if the user is on `/picks`, those handlers navigate to `/` first, then scroll.
+**Home page layout**: `HomePage` in `App.jsx` composes all sections in order — `Nav`, `Hero`, `Services`, `Stylist`, `Contact`, `Footer`. Section navigation (`#services`, `#stylist`, `#contact`) happens programmatically via `scrollIntoView` in `Nav.jsx`/`Footer.jsx` because HashRouter owns the URL hash; if the user is on `/services`, those handlers navigate to `/` first, then scroll. For the same reason the skip-to-content link in `Nav.jsx` focuses `#main` programmatically instead of using a plain anchor.
 
-**Scroll animations**: The custom `useInView(threshold)` hook in `src/hooks/useInView.js` wraps IntersectionObserver. Components attach the returned `ref` to a DOM element; when it enters the viewport the hook adds an `is-visible` class. The CSS classes `.fade-up`, `.hero-animate`, etc. in `src/index.css` drive the actual keyframe animations triggered by that class.
+**Scroll animations**: The custom `useInView(threshold)` hook in `src/hooks/useInView.js` wraps IntersectionObserver. Components attach the returned `ref` to a DOM element; when it enters the viewport the hook adds an `is-visible` class. The CSS classes `.fade-up`, `.hero-animate`, etc. in `src/index.css` drive the actual keyframe animations triggered by that class. All animations are disabled under `prefers-reduced-motion` (media query in `index.css`); JS-driven smooth scrolling checks the same preference via `scrollBehavior()` in `src/utils/motion.js` — use it for any new scroll calls.
 
 **Styling**: Pure Tailwind with a custom theme defined in `tailwind.config.js`. Key design tokens:
 - Colors: `gold` (#C4956A), `brown` (#8C6240), `bg` (#FAF7F2)
@@ -31,11 +31,13 @@ There are no tests and no linter configured in this project.
 - Container: `maxWidth.site` = 1100px
 - Custom shadows and a fluid `fontSize.hero`/`fontSize.display` using CSS `clamp()`
 
-**No state management library**: The only stateful components are `Nav.jsx`, which tracks `scrolled` (adds a shadow on scroll) and `open` (mobile hamburger toggle), and `AmazonPicks.jsx`, which tracks the active category filter.
+**No state management library**: The only stateful component is `Nav.jsx`, which tracks `scrolled` (adds a shadow on scroll) and `open` (mobile hamburger toggle).
 
 **SEO**: `index.html` carries the meta description, Open Graph/Twitter tags, and a `HairSalon` JSON-LD block with the studio's address, phone, and hours. Keep those in sync when contact details or hours change in `Contact.jsx`/`Footer.jsx`.
 
 **No backend, no data fetching**: All content is hardcoded. The booking CTA links externally to `aspirestudio.square.site`.
+
+**Images**: Photos live in `public/assets/`. Service feature photos are WebP resized to 1000px wide (~30–50 KB each); keep new photos in that ballpark and give every `<img>` explicit `width`/`height` attributes to avoid layout shift. `aspirestudiopic.jpg` stays JPEG because `index.html` references it as the `og:image`.
 
 ## Deployment
 

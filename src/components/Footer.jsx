@@ -1,4 +1,5 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { scrollBehavior } from '../utils/motion'
 
 export default function Footer() {
   const navigate = useNavigate()
@@ -8,7 +9,7 @@ export default function Footer() {
   // Sections only exist on the home route; navigate there first if needed.
   const goTo = (e, href) => {
     e.preventDefault()
-    const scroll = () => document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+    const scroll = () => document.getElementById(href.slice(1))?.scrollIntoView({ behavior: scrollBehavior() })
     if (location.pathname !== '/') {
       navigate('/')
       setTimeout(scroll, 50)

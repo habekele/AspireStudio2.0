@@ -1,3 +1,5 @@
+import { scrollBehavior } from '../utils/motion'
+
 export default function Hero() {
   return (
     <section
@@ -46,7 +48,7 @@ export default function Hero() {
             href="#services"
             onClick={(e) => {
               e.preventDefault()
-              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+              document.getElementById('services')?.scrollIntoView({ behavior: scrollBehavior() })
             }}
             className="inline-flex items-center gap-1.5 font-sans text-sm font-light text-stone hover:text-text transition-colors duration-150"
           >

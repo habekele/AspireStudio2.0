@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <>
       <Nav />
-      <main>
+      <main id="main" tabIndex={-1} className="outline-none">
         <Hero />
         <Services />
         <Stylist />
