@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAF7F2"/>
+      <stop offset="1" stop-color="#F2E8D9"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1125" fill="url(#bg)"/>
+
+  <!-- arch backdrop -->
+  <path d="M190 900 L190 480 A260 260 0 0 1 710 480 L710 900 Z" fill="#F0E6D3"/>
+  <path d="M160 935 L160 480 A290 290 0 0 1 740 480 L740 935" fill="none" stroke="#C4956A" stroke-opacity="0.4" stroke-width="3"/>
+
+  <!-- brow -->
+  <path d="M290 468 Q450 388 620 462" fill="none" stroke="#C4956A" stroke-width="9" stroke-linecap="round" stroke-opacity="0.75"/>
+
+  <!-- closed lid -->
+  <path d="M250 580 Q450 712 650 580" fill="none" stroke="#8C6240" stroke-width="13" stroke-linecap="round"/>
+
+  <!-- lashes fanning from the lid -->
+  <g fill="none" stroke="#8C6240" stroke-width="9" stroke-linecap="round">
+    <path d="M296 617 q-14 44 -52 68"/>
+    <path d="M352 646 q-8 50 -38 80"/>
+    <path d="M414 664 q-2 54 -22 90"/>
+    <path d="M478 667 q6 54 -6 92"/>
+    <path d="M540 651 q14 48 34 82"/>
+    <path d="M596 622 q18 42 50 66"/>
+  </g>
+
+  <!-- sparkles -->
+  <g stroke="#C4956A" stroke-width="6" stroke-linecap="round">
+    <path d="M655 500 v28 M641 514 h28"/>
+    <path d="M252 512 v22 M241 523 h22"/>
+    <path d="M450 826 v24 M438 838 h24"/>
+    <path d="M560 780 v16 M552 788 h16" stroke-opacity="0.6"/>
+  </g>
+</svg>

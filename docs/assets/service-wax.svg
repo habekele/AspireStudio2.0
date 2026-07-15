@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAF7F2"/>
+      <stop offset="1" stop-color="#F2E8D9"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1125" fill="url(#bg)"/>
+
+  <!-- arch backdrop -->
+  <path d="M190 900 L190 480 A260 260 0 0 1 710 480 L710 900 Z" fill="#F0E6D3"/>
+  <path d="M160 935 L160 480 A290 290 0 0 1 740 480 L740 935" fill="none" stroke="#C4956A" stroke-opacity="0.4" stroke-width="3"/>
+
+  <!-- steam curls -->
+  <g fill="none" stroke="#C4956A" stroke-width="8" stroke-linecap="round" stroke-opacity="0.8">
+    <path d="M385 540 q-16 -28 0 -54 q16 -26 0 -50"/>
+    <path d="M450 528 q-16 -28 0 -54 q16 -26 0 -50"/>
+  </g>
+
+  <!-- spatula -->
+  <path d="M508 600 L604 470" fill="none" stroke="#8C6240" stroke-width="12" stroke-linecap="round"/>
+  <path d="M604 470 L630 435" fill="none" stroke="#8C6240" stroke-width="24" stroke-linecap="round"/>
+
+  <!-- pot -->
+  <g fill="none" stroke="#8C6240" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M330 604 L346 774 Q350 812 392 812 L508 812 Q550 812 554 774 L570 604" stroke-width="12"/>
+    <path d="M306 600 L594 600" stroke-width="13"/>
+  </g>
+
+  <!-- wax drip over the rim -->
+  <path d="M566 606 L566 646 Q566 668 548 664 Q534 660 538 640 L542 606 Z" fill="#C4956A"/>
+
+  <!-- pot detail lines -->
+  <g stroke="#C4956A" stroke-width="7" stroke-linecap="round">
+    <path d="M376 700 h148"/>
+    <path d="M388 736 h124" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- sparkles -->
+  <g stroke="#C4956A" stroke-width="6" stroke-linecap="round">
+    <path d="M652 560 v28 M638 574 h28"/>
+    <path d="M262 640 v22 M251 651 h22"/>
+    <path d="M296 480 v16 M288 488 h16" stroke-opacity="0.6"/>
+  </g>
+</svg>
