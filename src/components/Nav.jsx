@@ -87,14 +87,6 @@ export default function Nav() {
             </li>
           ))}
           <li>
-            <Link
-              to="/picks"
-              className="font-sans text-[0.8rem] font-light text-stone hover:text-text transition-colors duration-150 tracking-wide"
-            >
-              Tru's Picks
-            </Link>
-          </li>
-          <li>
             <a
               href="https://aspirestudio.square.site/"
               target="_blank"
@@ -133,11 +125,6 @@ export default function Nav() {
                 </a>
               </li>
             ))}
-            <li className="border-b border-border/60">
-              <Link to="/picks" onClick={() => setOpen(false)} className="block py-3.5 font-sans text-sm font-light text-stone">
-                Tru's Picks
-              </Link>
-            </li>
             <li className="py-3.5">
               <a href="https://aspirestudio.square.site/" target="_blank" rel="noopener" onClick={() => setOpen(false)} className="font-sans text-sm font-medium text-gold">
                 Book Now
