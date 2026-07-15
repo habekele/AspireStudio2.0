@@ -1,7 +1,9 @@
 // Service menu for the /services page.
 // Edit names, descriptions, and menu items here — no code changes needed.
 // Feature photos live in public/assets/; to swap one, replace the file
-// there or point image at `${import.meta.env.BASE_URL}assets/your-photo.jpg`.
+// there or point image at `${import.meta.env.BASE_URL}assets/your-photo.webp`.
+// imageWidth/imageHeight are the file's intrinsic pixel dimensions — update
+// them when swapping a photo so the browser can reserve space before load.
 
 export const BOOK_URL = 'https://aspirestudio.square.site/'
 
@@ -12,9 +14,11 @@ export const majorServices = [
     title: 'Hair Services',
     subtitle: 'Colors & Cuts',
     description:
-      'From a fresh trim to a full colour transformation, every hair service starts with a real conversation about your hair — its texture, its history, and where you want it to go. Cuts, dimensional colour, highlights, and restorative treatments are all tailored to you, never one-size-fits-all.',
-    tags: ['Haircuts', 'Colour', 'Highlights', 'Balayage', 'Treatments'],
-    image: `${import.meta.env.BASE_URL}assets/service-hair.jpg`,
+      'From a fresh trim to a full color transformation, every hair service starts with a real conversation about your hair — its texture, its history, and where you want it to go. Cuts, dimensional color, highlights, and restorative treatments are all tailored to you, never one-size-fits-all.',
+    tags: ['Haircuts', 'Color', 'Highlights', 'Balayage', 'Treatments'],
+    image: `${import.meta.env.BASE_URL}assets/service-hair.webp`,
+    imageWidth: 1000,
+    imageHeight: 1500,
     imageAlt: 'Stylist blow-drying blonde hair with a round brush',
   },
   {
@@ -25,7 +29,9 @@ export const majorServices = [
     description:
       'Classic, hybrid, and volume sets — each lash placed individually for a look that’s full, feather-light, and unmistakably yours. Whether you want everyday definition or full-glam drama, your set is mapped to your eye shape and lifestyle, with fills to keep it flawless.',
     tags: ['Classic', 'Hybrid', 'Volume', 'Fills'],
-    image: `${import.meta.env.BASE_URL}assets/service-lashes.jpg`,
+    image: `${import.meta.env.BASE_URL}assets/service-lashes.webp`,
+    imageWidth: 1000,
+    imageHeight: 666,
     imageAlt: 'Close-up of lash extensions being applied with tweezers',
   },
   {
@@ -36,7 +42,9 @@ export const majorServices = [
     description:
       'Clean lines and soft skin, without the guesswork. Brows are shaped to frame your face — not just follow a trend — using precise waxing or traditional threading, whichever suits your skin best. Quick, gentle facial services that finish any look.',
     tags: ['Brow Wax', 'Brow Tint', 'Threading', 'Facial Wax'],
-    image: `${import.meta.env.BASE_URL}assets/service-wax.jpg`,
+    image: `${import.meta.env.BASE_URL}assets/service-wax.webp`,
+    imageWidth: 1000,
+    imageHeight: 1500,
     imageAlt: 'Wooden wax spatulas with hard wax beads',
   },
 ]

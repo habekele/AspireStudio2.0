@@ -6,8 +6,8 @@ const SERVICES = [
     number: '01',
     title: 'Hair Services',
     subtitle: 'Colors & Cuts',
-    desc: 'Cuts and color tailored to your hair type — from fresh trims to full colour transformations.',
-    tags: ['Haircuts', 'Colour', 'Highlights', 'Treatments'],
+    desc: 'Cuts and color tailored to your hair type — from fresh trims to full color transformations.',
+    tags: ['Haircuts', 'Color', 'Highlights', 'Treatments'],
   },
   {
     number: '02',

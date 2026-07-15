@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { scrollBehavior } from '../utils/motion'
 
 const LINKS = [
   ['#stylist',  'Meet Tru'],
@@ -37,9 +38,9 @@ export default function Nav() {
   // Scroll programmatically instead.
   const scrollTo = (href) => {
     if (href === '#top') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      window.scrollTo({ top: 0, behavior: scrollBehavior() })
     } else {
-      document.getElementById(href.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+      document.getElementById(href.slice(1))?.scrollIntoView({ behavior: scrollBehavior() })
     }
   }
 
@@ -59,6 +60,14 @@ export default function Nav() {
     <header ref={headerRef} className={`fixed top-0 left-0 right-0 z-50 bg-bg/96 backdrop-blur-sm transition-all duration-300 ${
       scrolled ? 'border-b border-border shadow-xs' : ''
     }`}>
+      {/* Plain #main anchors would be swallowed by HashRouter, so move focus manually. */}
+      <a
+        href="#main"
+        onClick={(e) => { e.preventDefault(); document.getElementById('main')?.focus() }}
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-5 focus:py-2.5 focus:rounded-full focus:bg-brown focus:text-bg font-sans text-sm font-medium"
+      >
+        Skip to content
+      </a>
       <nav className="max-w-site mx-auto px-6 md:px-8 h-[68px] flex items-center justify-between">
 
         <a href="#top" onClick={(e) => goTo(e, '#top')} className="flex flex-col">

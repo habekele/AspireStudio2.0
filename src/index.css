@@ -39,3 +39,16 @@
     animation: hero-in 0.8s ease 0.45s forwards;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-up,
+  .hero-animate,
+  .hero-animate-delay,
+  .hero-animate-delay-2 {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
